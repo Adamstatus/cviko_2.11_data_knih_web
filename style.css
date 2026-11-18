@@ -1,0 +1,242 @@
+.logo{
+    width: 200px;
+    display: block;
+    height: auto;
+    padding: 10px 20px;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    background-color: #FAF7F2;
+}
+.topbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #bce3f8;
+    margin: 10px;
+    gap: 20px;
+    border-radius: 10px;
+}
+.topbar a {
+    text-decoration: none; /*odstráni podčiarknutia textu */
+    color: #222;
+    background-color: #FAF7F2;
+    padding: 8px 14px;
+    border-radius: 6px;  /*zaoblenie rohov*/
+}
+.uvod-text{
+    max-width: 600px;
+}
+.uvod{
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+}
+.img_uvod{
+    width: 600px;
+    height: 600px;
+}
+.list-text{
+    padding: 0px 20px;
+    font-size: 25px;
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: center;
+
+}
+.zoznam-box{
+    background-color: #c5e6f8 ;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 1200px;
+    align-items: center;
+}
+.zoznam-box ol{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    /*určuje počet a šírku stĺpcov*/
+    gap: 10px 16px;
+    padding-left: 0px;
+    list-style-position: inside;
+}
+.zoznam-box li{
+    background-color: #FAF7F2;
+    padding: 12px;
+    border-radius: 8px;
+}
+li:hover{
+    background-color: #E8E2D9;
+}
+@media (max-width: 600px) {
+    .zoznam-box ol {
+        grid-template-columns: 1fr;
+    }
+}/*pravidlo v zátvorkách tj. bude iba jeden stĺpec 
+ked je šírka obrazovky najviac 600px*/
+.table-nadpis{
+    padding: 0px 20px;
+    font-size: 25px;
+    margin: 20px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+table{
+    width: 80%;
+    border-collapse: separate;
+    background-color: transparent;
+    font-size: 25px;
+    margin: 0px auto;
+    border-spacing: 0 8px;
+}
+th, td{
+    padding: 15px;
+    background-color: #c5e6f8;
+    text-align: center;
+}
+th:first-child, td:first-child{
+    border-radius: 15px 0 0 15px;
+}
+th:last-child, td:last-child{
+    border-radius: 0 15px 15px 0;
+}
+tr:hover td{
+    background-color: #a5d5ef;
+}
+.form-text{
+    text-align: center;
+    font-size: 25px;
+}
+.film-form {
+    background-color: #c5e6f8;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 650px;
+    margin: 20px auto;
+}
+.film-form div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.film-form label {
+    width: 150px;
+    flex-shrink: 0;
+}
+.film-form select,
+.film-form input:not([type="radio"]),
+.film-form textarea {
+    background-color: #FAF7F2;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    flex: 1;
+    min-width: 0;
+}
+.film-form input[type="radio"]{
+    width: auto;
+    margin: 0 5px;
+    accent-color: #539BC6;
+}
+.film-form button {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #FAF7F2;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*pri triedach používame . a pri id používame #*/
+#pocetKliknuti {
+    font-size: 40px;
+    font-weight: bold;
+}
+.javascript-text {
+    text-align: center;
+    font-size: 25px;
+    margin: 30px auto;
+}
+.javascript-box {
+    background-color: #c5e6f8;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 650px;
+    margin: 20px auto;
+    text-align: center;
+}
+.javascript-box button {
+    background-color: #FAF7F2;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+.javascript-box button:hover {
+    background-color: #E8E2D9;
+    transition: background-color 0.3s ease;
+}
+#prihlaska > div {
+    margin-bottom: 18px;
+}
+
+#prihlaska label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+#prihlaska input:not([type="radio"]):not([type="checkbox"]),
+#prihlaska select,
+#prihlaska textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    background-color: #FAF7F2;
+    font: inherit;
+}
+
+#prihlaska textarea {
+    resize: vertical;
+}
+#prihlaska input:focus,
+#prihlaska select:focus,
+#prihlaska textarea:focus {
+    outline: 2px solid #539BC6;
+    outline-offset: 2px;
+}
+/*:focus a riadky pod tým, po kliknutí do políčka
+ ti vytvorí rámik s príslušnými vlastnosťami okolo zakliknutého políčka */
+
+#prihlaska button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FAF7F2;
+    font: inherit;
+    cursor: pointer;
+}
+
+#prihlaska button:hover {
+    background-color: #E8E2D9;
+}
+
+#zoznam button {
+    background-color: #FAF7F2;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+}
+
+#zoznam button:hover {
+    background-color: #E8E2D9;
+}

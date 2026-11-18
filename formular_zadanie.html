@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prihlásenie na kurz</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formular_zadanie.css">
+
+    <script src="app.js" defer></script>
+    <script src="formular_zadanie.js" defer></script>
+</head>
+<body>
+    <h1 class="nadpis-kurzu">Prihlásenie na kurz</h1>
+
+    <div class="formular-layout">
+        <form id="prihlaska">
+            <div>
+                <label for="meno">Meno a priezvisko</label>
+                <input type="text" id="meno" name="meno">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div>
+                <label for="tel">Telefónne číslo</label>
+                <input type="tel" id="tel" name="tel">
+            </div>
+
+            <div>
+                <label for="date">Dátum narodenia</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div>
+                <label for="kurz">Typ kurzu</label>
+                <select name="kurz" id="kurz">
+                    <option value="" disabled selected>Vyber kurz</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select>
+            </div>
+
+            <div>
+                <p>Úroveň</p>
+                <label>
+                <input type="radio" id="beginner" name="uroven" value="Beginner">
+                Beginner</label>
+                <label>
+                <!--nepíšem Begginer za input ale do label aby sa aj kliknutím na text dalo začiaknúť políčko-->
+                <input type="radio" id="intermediate" name="uroven" value="Intermediate">
+                Intermediate
+                </label>
+                <label>
+                <input type="radio" id="advanced" name="uroven" value="Advanced">
+                Advanced
+                </label>
+            </div>
+
+            <div>
+                <label for="poznamka">Poznámka:</label>
+                <textarea name="poznamka" id="poznamka" rows="5"></textarea>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" id="suhlas" name="suhlas">
+                    Súhlasím s podmienkami
+                </label>
+            </div>
+            <button type="submit">Odoslať formulár</button>
+        </form>
+                <div class="nahlad">
+            <h2>Náhľad prihlášky</h2>
+            <p>Meno a priezvisko:  <span id="nahladMeno">--</span> </p>
+            <p>Email:  <span id="nahladEmail">--</span></p>
+            <p>Telefónne číslo:  <span id="nahladTel">--</span></p>
+            <p>Dátum narodenia:  <span id="nahladDate">--</span> </p>
+            <p>Kurz:  <span id="nahladKurz">--</span></p>
+            <p>Úroveň:  <span id="nahladUroven">--</span></p>
+            <p>Poznámka:  <span id="nahladPoznamka">--</span></p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

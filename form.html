@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulár</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-text">
+        <h1>Hodnotenie Fast &amp; Furious</h1>
+        <p>Vyber svoj obľúbený film a ohodnoť ho.</p>
+    </div>
+
+    <form action="" class="film-form"> <!--form vytvorí formulár a action je miesto kde sa pošlú údaje-->
+        <div>
+            <label for="meno">Tvoje meno: </label>
+            <input type="text" id="meno" name="meno">
+        </div>
+
+        <div>
+            <label for="email">Zadaj svoj email: </label>
+            <input type="email" id="email" name="email">
+        </div>
+        
+        <div>
+            <label for="vek">Zadaj svoj vek: </label>
+            <input type="number" id="vek" name="vek">
+        </div>
+
+        <div>
+            <label for="film">Obľúbený film</label>
+            <select id="film" name="film">
+                <option value="" disabled selected>Vyber film</option>
+                <option value="fast1">The Fast and the Furious</option>
+                <option value="fast2">2 Fast 2 Furious</option>
+                <option value="fast3">The Fast and the Furious: Tokyo Drift</option>
+                <option value="fast4">Fast &amp; Furious</option>
+                <option value="fast5">Fast Five</option>
+                <option value="fast6">Fast &amp; Furious 6</option>
+                <option value="fast7">Furious 7</option>
+                <option value="fast8">The Fate of the Furious</option>
+                <option value="fast9">F9: The Fast Saga</option>
+                <option value="fast10">Fast X</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Hodnotenie filmu:</label>
+
+            <input type="radio" name="hodnotenie" value="1"> 1
+            <input type="radio" name="hodnotenie" value="2"> 2
+            <input type="radio" name="hodnotenie" value="3"> 3
+            <input type="radio" name="hodnotenie" value="4"> 4
+            <input type="radio" name="hodnotenie" value="5"> 5
+        </div>
+
+        <div>
+            <label for="komentar">Tvoj komentár k filmu</label>
+            <textarea name="komentar" id="komentar" rows="4"></textarea>
+        </div>
+        <button type="submit">Odoslať hodnotenie</button>
+    </form>
+</body>
+</html>
