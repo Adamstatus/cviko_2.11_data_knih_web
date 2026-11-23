@@ -1,6 +1,14 @@
 function nacitajKnihy(){
-    fetch("/api/knihy")
-    .then(response => response.json())
+    const hladat = document.getElementById("hladatInput").value.trim();
+    const zoradit = document.getElementById("zoraditSelect").value;
+    const smer = document.getElementById("smerSelect").value;
+    const parametre = new URLSearchParams({hladat, zoradit, smer});
+
+    fetch("/api/knihy?" + parametre.toString())
+    .then(response => {
+        if (!response.ok) throw new Error("Chyba načítania kníh");
+        return response.json();
+    })
     .then(knihy => {
         const zoznam = document.getElementById("zoznam");
         zoznam.innerHTML = "";
@@ -79,6 +87,10 @@ function nacitajKnihy(){
             riadok.appendChild(bunka);
             zoznam.appendChild(riadok);
         });
+    })
+    .catch(error => {
+        console.error("Chyba pri načítaní kníh:", error);
+        alert("Nepodarilo sa načítať zoznam kníh.");
     });
 }
 
@@ -88,7 +100,7 @@ formular.addEventListener("submit", event => {
     const kniha = {
         nazov: document.getElementById("nazov").value,
         autor: document.getElementById("autor").value,
-        rok: document.getElementById("rok").value,
+        rok: Number(document.getElementById("rok").value),
         cena: Number(document.getElementById("cena").value)
     };
     fetch("/api/knihy", {
@@ -101,6 +113,16 @@ formular.addEventListener("submit", event => {
         formular.reset();
         nacitajKnihy();
     });
+});
+
+document.getElementById("hladatInput").addEventListener("input", nacitajKnihy);
+document.getElementById("zoraditSelect").addEventListener("change", nacitajKnihy);
+document.getElementById("smerSelect").addEventListener("change", nacitajKnihy);
+document.getElementById("resetFilterBtn").addEventListener("click", () => {
+    document.getElementById("hladatInput").value = "";
+    document.getElementById("zoraditSelect").value = "id";
+    document.getElementById("smerSelect").value = "ASC";
+    nacitajKnihy();
 });
 
 nacitajKnihy();

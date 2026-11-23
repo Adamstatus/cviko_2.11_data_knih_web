@@ -18,6 +18,21 @@
                 <input id="cena" type="number" step="0.01" min="0" placeholder="Cena (€)" required>
                 <button>Pridať knihu</button>
             </form>
+            <div id="filterPanel">
+                <input id="hladatInput" type="text" placeholder="Hladať názov alebo autora...">
+                <select id="zoraditSelect">
+                    <option value="id">Zoradiť podľa: ID</option>
+                    <option value="nazov">Názov</option>
+                    <option value="autor">Autor</option>
+                    <option value="rok">Rok vydania</option>
+                    <option value="cena">Cena</option>
+                </select>
+                <select id="smerSelect">
+                    <option value="ASC">Vzostupne (ASC)</option>
+                    <option value="DESC">Zostupne (DESC)</option>
+                </select>
+                <button id="resetFilterBtn" type="button">Zrušiť filter</button>
+            </div>
             <table>
 
                 <thead><tr><th>ID</th><th>Názov</th><th>Autor</th><th>Rok</th><th>Cena (€)</th><th>Akcia</th></tr></thead>

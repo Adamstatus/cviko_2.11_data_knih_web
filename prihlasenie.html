@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prihlásenie</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+        <script src="prihlasenie.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <h1>Prihlásenie používateľa</h1>
+            <form id="prihlasenieForm" class="user-form">
+                <input id="email" type="email" placeholder="E-mail" autocomplete="email" required>
+                <input id="heslo" type="password" placeholder="Heslo" autocomplete="current-password" required>
+                <button type="submit">Prihlásiť sa</button>
+            </form>
+            <div id="vysledok" role="status" aria-live="polite"></div>
+        </main>
+    </body>
+</html>
